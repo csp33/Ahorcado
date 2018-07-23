@@ -1,4 +1,3 @@
-
 package Ahorcado;
 
 import java.util.ArrayList;
@@ -7,7 +6,8 @@ import java.util.ArrayList;
 public class Palabra {
 
     private ArrayList<Letra> palabra;
-
+   
+    //Constructor
     public Palabra(String entrada) {
         palabra = new ArrayList(entrada.length());
         for (int i = 0; i < entrada.length(); i++) {
@@ -18,8 +18,8 @@ public class Palabra {
     // Indica si la palabra contiene la letra especiicada.
     public boolean contiene(char c) {
         boolean resultado = false;
-        for (Letra l : palabra) {
-            if (l.comprobar(c)) {
+        for (int i=0;i<palabra.size();i++) {
+            if (palabra.get(i).comprobar(c)) {
                 resultado = true;
             }
         }
@@ -40,7 +40,7 @@ public class Palabra {
     public String getPalabra() {
         String resultado = "";
         for (Letra l : palabra) {
-            resultado+= l.getLetra();
+            resultado += l.getLetra();
         }
         return resultado;
     }
