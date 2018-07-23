@@ -1,27 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2018 csp98
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package InterfazGrafica;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author csp98
- */
 public class VistaDibujo extends javax.swing.JPanel {
-
-    /**
-     * Creates new form VistaDibujo
-     */
 
     public VistaDibujo() {
         initComponents();
@@ -34,7 +31,7 @@ public class VistaDibujo extends javax.swing.JPanel {
             img.setVisible(false);
         } else {
             img.setVisible(true);
-            img.setIcon(new ImageIcon(getClass().getResource("/InterfazGrafica/step"+errores+".png")));
+            img.setIcon(new ImageIcon(getClass().getResource("/InterfazGrafica/step" + errores + ".png")));
         }
     }
 

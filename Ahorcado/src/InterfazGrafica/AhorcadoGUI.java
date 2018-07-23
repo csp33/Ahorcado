@@ -1,7 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2018 csp98
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package InterfazGrafica;
 
@@ -9,10 +20,6 @@ import Ahorcado.Palabra;
 import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author csp98
- */
 public class AhorcadoGUI extends javax.swing.JFrame {
 
     private Palabra p;
@@ -20,11 +27,9 @@ public class AhorcadoGUI extends javax.swing.JFrame {
     private int errores = 0;
     private final int MAX_ERRORES = 7;
 
-    /**
-     * Creates new form AhorcadoGUI
-     */
     public AhorcadoGUI() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -692,7 +697,6 @@ public class AhorcadoGUI extends javax.swing.JFrame {
         p = nueva;
         this.vistaPalabra1.actualizar(p);
         this.vistaVidas1.actualizar(MAX_ERRORES - errores);
-        System.out.println("errores="+errores);
         this.vistaDibujo1.actualizar(errores);
         if (p.acertada()) {
             JOptionPane.showMessageDialog(this, "¡Ganaste!", "Ahorcado", JOptionPane.INFORMATION_MESSAGE);
@@ -705,16 +709,11 @@ public class AhorcadoGUI extends javax.swing.JFrame {
     }
 
     private String pedirPalabra() {
-        String resultado = JOptionPane.showInputDialog(this, "Introduzca una palabra", "Ahorcado", JOptionPane.QUESTION_MESSAGE);
-        if (resultado == null) {
-            //Si se pulsa cancelar, se cierra el juego.
+        SolicitudPalabra solicitud = new SolicitudPalabra(this, true);
+        if (solicitud == null) {
             this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
-        } else if (resultado.contains(" ")) {
-            JOptionPane.showMessageDialog(this, "¡No se permiten espacios!", "Ahorcado", JOptionPane.ERROR_MESSAGE);
-            resultado=pedirPalabra();
-        } else if (resultado.isEmpty()) {
-            resultado=pedirPalabra();
         }
+        String resultado = solicitud.getPalabra();
         return resultado;
     }
 
@@ -758,14 +757,11 @@ public class AhorcadoGUI extends javax.swing.JFrame {
         this.rendirseButton.setEnabled(activar);
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         AhorcadoGUI controlador = new AhorcadoGUI();
-
         controlador.iniciarJuego();
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AhorcadoGUI().setVisible(true);
