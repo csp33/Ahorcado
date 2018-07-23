@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Ahorcado;
 
-/**
- *
- * @author csp98
- */
 // Una letra almacena el carácter y un booleano que nos indica si la hemos adivinado.
 public class Letra {
 
@@ -20,7 +12,9 @@ public class Letra {
     }
 
     public boolean comprobar(char otra) {
-        acertada = letra == otra;
+        if(letra==otra)
+            acertada=true;
+        //acertada = letra == otra;
         return acertada;
     }
 

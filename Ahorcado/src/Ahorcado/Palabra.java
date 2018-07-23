@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Ahorcado;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author csp98
- */
 // Una palabra está formada por un vector de letras.
 public class Palabra {
 

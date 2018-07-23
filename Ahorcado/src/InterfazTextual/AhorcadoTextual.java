@@ -1,67 +1,72 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package InterfazTextual;
 
 import Ahorcado.Palabra;
+import static java.lang.Character.toLowerCase;
 import java.util.Scanner;
 
-/**
- *
- * @author csp98
- */
+
 public class AhorcadoTextual {
 
-    static final int MAX_ERRORES = 10;
-    static Scanner sc = new Scanner(System.in);
+    static final int MAX_ERRORES = 5;
 
-    /**
-     * @param args the command line arguments
-     */
     public static String solicitarPalabra() {
+        Scanner sc = new Scanner(System.in);    //Debe ser local para que se destruya y no queden residuos.
         System.out.println("Introduzca la palabra a adivinar:\n");
         String resultado = sc.nextLine();
         return resultado;
     }
 
     public static char solicitarLetra() {
+        Scanner sc = new Scanner(System.in);
         char resultado = sc.next().charAt(0);
         return resultado;
     }
 
+    public static boolean seguirJugando() {
+        char lectura;
+        do {
+            System.out.println(" ¿Quieres jugar de nuevo? [S/N]");
+            lectura = solicitarLetra();
+            lectura=toLowerCase(lectura);
+        }while(lectura!='s' && lectura!='n');
+     
+        return lectura=='s';
+    }
+
     public static void main(String[] args) {
-        // TODO code application logic here
         String entrada;
         Palabra p;
-        char actual, repetir;
+        char actual;
         boolean seguir = true;
-        int errores = 0;
+        int errores;
+        int vidas;
         while (seguir) {
+            //Inicializamos variables
+            errores = 0;
             entrada = solicitarPalabra();
             p = new Palabra(entrada);
+            //Entramos al juego
             do {
+                //Informamos del estado actual
+                System.out.println("\t\t" + p.getPalabra() + "\n");
+                System.out.println("Vidas restantes: " + (MAX_ERRORES - errores) + "\n");
+                //Pedimos letra
                 System.out.println("Introduzca una letra:\n");
                 actual = solicitarLetra();
-                if (p.contiene(actual)) {
-                    System.out.println("La palabra contiene la letra " + actual + "\n");
-
-                } else {
-                    System.out.println("La palabra no contiene la letra " + actual + "\n");
+                //Anotamos el error si lo hemos cometido
+                if (!p.contiene(actual)) {
                     errores++;
                 }
-                System.out.println("\t\t" + p.getPalabra() + "\n");
             } while (errores < MAX_ERRORES && !p.acertada());
-
+            //Fin del juego.
             if (errores == MAX_ERRORES) {
                 System.out.println("¡Perdiste! La palabra era " + entrada + "\n");
             } else {
                 System.out.println("¡Enhorabuena, ganaste! ");
             }
-            System.out.println(" ¿Quieres jugar de nuevo? [S/N]");
-            repetir = solicitarLetra();
-            seguir = repetir == 'S' || repetir == 's';
+            //Preguntamos si se quiere jugar otra vez
+            seguir = seguirJugando();
         }
     }
 }
