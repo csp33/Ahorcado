@@ -30,6 +30,7 @@ public class AhorcadoGUI extends javax.swing.JFrame {
 
     public AhorcadoGUI() {
         initComponents();
+        //Centramos la ventana en pantalla.
         this.setLocationRelativeTo(null);
     }
 
@@ -465,220 +466,139 @@ public class AhorcadoGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void QButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QButtonActionPerformed
-        boolean acierto = this.p.contiene('q');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('q');
+
         this.QButton.setEnabled(false);
     }//GEN-LAST:event_QButtonActionPerformed
 
     private void RButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RButtonActionPerformed
-        boolean acierto = this.p.contiene('r');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('r');
+
         this.RButton.setEnabled(false);    }//GEN-LAST:event_RButtonActionPerformed
 
     private void SButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SButtonActionPerformed
-        boolean acierto = this.p.contiene('s');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('s');
+
         this.SButton.setEnabled(false);    }//GEN-LAST:event_SButtonActionPerformed
 
     private void TButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TButtonActionPerformed
-        boolean acierto = this.p.contiene('t');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('t');
+
         this.TButton.setEnabled(false);    }//GEN-LAST:event_TButtonActionPerformed
 
     private void UButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UButtonActionPerformed
-        boolean acierto = this.p.contiene('u');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('u');
+
         this.UButton.setEnabled(false);    }//GEN-LAST:event_UButtonActionPerformed
 
     private void VButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VButtonActionPerformed
-        boolean acierto = this.p.contiene('v');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('v');
+
         this.VButton.setEnabled(false);    }//GEN-LAST:event_VButtonActionPerformed
 
     private void WButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WButtonActionPerformed
-        boolean acierto = this.p.contiene('w');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('w');
+
         this.WButton.setEnabled(false);    }//GEN-LAST:event_WButtonActionPerformed
 
     private void XButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XButtonActionPerformed
-        boolean acierto = this.p.contiene('x');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('x');
+
         this.XButton.setEnabled(false);    }//GEN-LAST:event_XButtonActionPerformed
 
     private void YButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YButtonActionPerformed
-        boolean acierto = this.p.contiene('y');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('y');
+
         this.YButton.setEnabled(false);    }//GEN-LAST:event_YButtonActionPerformed
 
     private void ZButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZButtonActionPerformed
-        boolean acierto = this.p.contiene('z');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('z');
+
         this.ZButton.setEnabled(false);    }//GEN-LAST:event_ZButtonActionPerformed
 
     private void HButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HButtonActionPerformed
-        boolean acierto = this.p.contiene('h');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('h');
+
         this.HButton.setEnabled(false);    }//GEN-LAST:event_HButtonActionPerformed
 
     private void FButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FButtonActionPerformed
-        boolean acierto = this.p.contiene('F');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('f');
+
         this.FButton.setEnabled(false);    }//GEN-LAST:event_FButtonActionPerformed
 
     private void EButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EButtonActionPerformed
-        boolean acierto = this.p.contiene('e');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('e');
+
         this.EButton.setEnabled(false);    }//GEN-LAST:event_EButtonActionPerformed
 
     private void JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonActionPerformed
-        boolean acierto = this.p.contiene('j');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('j');
+
         this.JButton.setEnabled(false);    }//GEN-LAST:event_JButtonActionPerformed
 
     private void KButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KButtonActionPerformed
-        boolean acierto = this.p.contiene('k');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('k');
+
         this.KButton.setEnabled(false);    }//GEN-LAST:event_KButtonActionPerformed
 
     private void PButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PButtonActionPerformed
-        boolean acierto = this.p.contiene('p');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('p');
+
         this.PButton.setEnabled(false);    }//GEN-LAST:event_PButtonActionPerformed
 
     private void LButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LButtonActionPerformed
-        boolean acierto = this.p.contiene('l');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('l');
+
         this.LButton.setEnabled(false);    }//GEN-LAST:event_LButtonActionPerformed
 
     private void MButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MButtonActionPerformed
-        boolean acierto = this.p.contiene('m');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('m');
+
         this.MButton.setEnabled(false);    }//GEN-LAST:event_MButtonActionPerformed
 
     private void NButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NButtonActionPerformed
-        boolean acierto = this.p.contiene('n');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('n');
+
         this.NButton.setEnabled(false);    }//GEN-LAST:event_NButtonActionPerformed
 
     private void EnieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnieButtonActionPerformed
-        boolean acierto = this.p.contiene('ñ');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('ñ');
+
         this.EnieButton.setEnabled(false);    }//GEN-LAST:event_EnieButtonActionPerformed
 
     private void OButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OButtonActionPerformed
-        boolean acierto = this.p.contiene('o');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('o');
+
         this.OButton.setEnabled(false);    }//GEN-LAST:event_OButtonActionPerformed
 
     private void BButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BButtonActionPerformed
-        boolean acierto = this.p.contiene('b');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('b');
+
         this.BButton.setEnabled(false);    }//GEN-LAST:event_BButtonActionPerformed
 
     private void AButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AButtonActionPerformed
-        boolean acierto = this.p.contiene('a');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('a');
+
         this.AButton.setEnabled(false);    }//GEN-LAST:event_AButtonActionPerformed
 
     private void DButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DButtonActionPerformed
-        boolean acierto = this.p.contiene('d');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('d');
+
         this.DButton.setEnabled(false);    }//GEN-LAST:event_DButtonActionPerformed
 
     private void CButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CButtonActionPerformed
-        boolean acierto = this.p.contiene('c');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('c');
+
         this.CButton.setEnabled(false);    }//GEN-LAST:event_CButtonActionPerformed
 
     private void GButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GButtonActionPerformed
-        boolean acierto = this.p.contiene('g');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('g');
+
         this.GButton.setEnabled(false);    }//GEN-LAST:event_GButtonActionPerformed
 
     private void IButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IButtonActionPerformed
-        boolean acierto = this.p.contiene('i');
-        if (!acierto) {
-            errores++;
-        }
-        this.actualizar(p);
+        accionBoton('i');
+
         this.IButton.setEnabled(false);    }//GEN-LAST:event_IButtonActionPerformed
 
     private void jugarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarButtonActionPerformed
@@ -688,6 +608,14 @@ public class AhorcadoGUI extends javax.swing.JFrame {
     private void rendirseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rendirseButtonActionPerformed
         perder();
     }//GEN-LAST:event_rendirseButtonActionPerformed
+
+    private void accionBoton(char letra) {
+        boolean acierto = this.p.contiene(letra);
+        if (!acierto) {
+            errores++;
+        }
+        this.actualizar(p);
+    }
 
     private void perder() {
         JOptionPane.showMessageDialog(this, "La palabra era " + solucion, "¡Perdiste!", JOptionPane.ERROR_MESSAGE);
@@ -711,6 +639,7 @@ public class AhorcadoGUI extends javax.swing.JFrame {
 
     private String pedirPalabra() {
         SolicitudPalabra solicitud = new SolicitudPalabra(this, true);
+        //Si cerramos la ventana, finalizamos el juego.
         if (solicitud == null) {
             this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
         }

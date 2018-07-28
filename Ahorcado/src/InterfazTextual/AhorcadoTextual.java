@@ -29,8 +29,8 @@ public class AhorcadoTextual {
         Scanner sc = new Scanner(System.in);    //Debe ser local para que se destruya y no queden residuos.
         System.out.println("Introduzca la palabra a adivinar:\n");
         String resultado = sc.nextLine();
-        if (resultado.contains(" ")) {
-            System.out.println("¡No se permiten espacios!");
+        if (!resultado.matches("[a-zA-Z[ñ]]+")) {
+            System.out.println("¡Sólo se permiten letras!");
             resultado = solicitarPalabra();
         }
         return resultado;

@@ -25,6 +25,7 @@ public class SolicitudPalabra extends javax.swing.JDialog {
     public SolicitudPalabra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        //Centramos la ventana.
         this.setLocationRelativeTo(null);
     }
 
@@ -100,9 +101,9 @@ public class SolicitudPalabra extends javax.swing.JDialog {
     private void almacenar() {
         if (this != null) {
             String pass = new String(passwordField.getPassword());
-            if (pass.isEmpty()) {
+            if (pass.isEmpty()) {   //No introducimos contraseña-
                 JOptionPane.showMessageDialog(this, "¡Introduce una palabra!", "Ahorcado", JOptionPane.ERROR_MESSAGE);
-            } else if (!pass.matches("[a-zA-Z[ñ]]+")) { //Sólo letras.
+            } else if (!pass.matches("[a-zA-Z[ñ]]+")) { //Introducimos algún carácter extraño..
                 JOptionPane.showMessageDialog(this, "¡Sólo se permiten letras!", "Ahorcado", JOptionPane.ERROR_MESSAGE);
 
             } else {
