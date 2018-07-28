@@ -14,6 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  """
+
+ # Una
 class Letra:
 
     #Constructor
@@ -28,10 +30,6 @@ class Letra:
             self.acertada=True
         return iguales
 
-    #Nos dice si hemos acertado esa letra.
-    def acertada(self):
-        return self.acertada
-
     #Devuelve la letra si ha sido adivinada o un guión en caso contrario.
-    def getLetra(self):
+    def get_letra(self):
         return ('-',self.letra)[self.acertada]

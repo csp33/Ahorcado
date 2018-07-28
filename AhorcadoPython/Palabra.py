@@ -15,13 +15,13 @@ class Palabra:
 
     def acertada(self):
         for l in self.palabra:
-            if not l.acertada():
+            if not l.acertada:
                 return False
         return True
 
-    def getPalabra(self):
+    def get_palabra(self):
         resultado=""
         for l in self.palabra:
-            letra=str(l.getLetra())
+            letra=str(l.get_letra())
             resultado+=letra
         return resultado
