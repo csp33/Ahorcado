@@ -23,7 +23,7 @@ public class VistaVidas extends javax.swing.JPanel {
     }
     
     public void actualizar(int vidas) {
-        this.jTextPane1.setText("Vidas restantes: " + vidas);
+        this.jTextPane1.setText("Quedan " + vidas + " intentos.");
     }
 
     /**
@@ -38,6 +38,8 @@ public class VistaVidas extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
 
+        jTextPane1.setEditable(false);
+        jTextPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

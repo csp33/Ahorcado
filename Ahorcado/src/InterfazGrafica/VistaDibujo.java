@@ -46,17 +46,21 @@ public class VistaDibujo extends javax.swing.JPanel {
 
         img = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(150, 195));
+        setMinimumSize(new java.awt.Dimension(150, 195));
+        setPreferredSize(new java.awt.Dimension(150, 195));
+
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/step1.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+            .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

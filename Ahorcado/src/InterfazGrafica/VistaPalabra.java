@@ -17,6 +17,8 @@
 package InterfazGrafica;
 
 import Ahorcado.Palabra;
+import java.awt.Color;
+import javax.swing.JEditorPane;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -61,6 +63,7 @@ public class VistaPalabra extends javax.swing.JPanel {
         jTextPane1 = new javax.swing.JTextPane();
 
         jTextPane1.setEditable(false);
+        jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jTextPane1.setFont(new java.awt.Font("Chandas", 1, 48)); // NOI18N
         jTextPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane2.setViewportView(jTextPane1);
